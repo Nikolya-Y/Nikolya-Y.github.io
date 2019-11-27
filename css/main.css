@@ -436,6 +436,17 @@ p {
 	max-width: 258px;
 	position: relative;
 }
+.img__NerArrivals>a>img:hover {
+	visibility: hidden;
+}
+.img__NerArrivals__1:hover {
+	background-image: url(../img/mid-items-hover/Black-Crop-Top-2-800x1023.jpg);
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: block;
+}
 .span__strikeOut {
 	text-decoration: line-through;
 }
@@ -477,6 +488,7 @@ p {
 	font-size: 16px;
 	line-height: 1.7em;
     font-weight: 400;
+    color: #fff;
 }
 .learnMore__Btn {
 	height: 50px;
@@ -546,6 +558,9 @@ p {
 	display: flex;
 	flex-direction: column;
 	margin-left: 20px;
+}
+.news__wrapper p {
+	color: #868686;
 }
 .news__img1 {
 	background-image: url(../img/blog-standard-image-6-70x55.jpg);
