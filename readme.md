@@ -1,4 +1,4 @@
-[Тык]("Project #1") <br>
+[Nikolya-Y.github.io/site1____baroque-2/ ]("Project #1") <br>
 ссылка на "оригинал": http://demo2.drfuri.com/baroque2/
 <hr>
 [Nikolya-Y.github.io/site2____KloE/](Nikolya-Y.github.io/site2____KloE/ "Project #2") <br>
