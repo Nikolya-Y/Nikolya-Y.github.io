@@ -1,0 +1,56 @@
+<html >
+<head>
+    <title></title>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            document.getElementById("openButton").onclick = openButtonHandler1;
+            document.getElementById("openButton1").onclick = openButtonHandler2;
+            document.getElementById("openButton2").onclick = openButtonHandler3;
+            document.getElementById("closeButton").onclick = closeButtonHandler;
+
+            var w, s,d;
+
+            function openButtonHandler1() {
+                // первый параметр - html страница, которая будет загружена в новом окне.
+                // второй параметр - имя окна
+                // третий параметр - список дополнительных параметров (необязательный)
+                w = window.open("laba13.html", "Window Name", "width=400,height=400,status=yes,resizable=no");
+            }
+
+            function closeButtonHandler1() {
+                w.close();
+            }
+
+
+            function openButtonHandler2() {
+              
+                s = window.open("laba14.html", "Window Name", "width=400,height=400,status=yes,resizable=no");
+            }
+
+            function closeButtonHandler2() {
+                s.close();
+            }
+
+
+            function openButtonHandler3() {
+                
+                d = window.open("laba15.html", "Window Name", "width=400,height=400,status=yes,resizable=no");
+            }
+
+            function closeButtonHandler3() {
+                d.close();
+            }
+        }
+       
+    </script>
+</head>
+<body>
+        <a name="c1"href ="laba14.html">
+                перейти до лабараторної №14</a> </br></p>
+     <input type="button" id="openButton" value="лаба 13" />
+    <input type="button" id="openButton1" value="лаба 14" />
+    <input type="button" id="openButton2" value="лаба 15" />
+    <input type="button" id="closeButton" value="Закрити" />
+</body>
+</html>

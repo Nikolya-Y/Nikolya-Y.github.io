@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Title</title>
+	<style>
+		.alertTrue {
+			padding: 15px;
+			border: 1px solid #d6e9c6;
+			border-radius: 4px;
+			color: #3c763d;
+			background-color: #dff0d8;
+		}
+		.alertFalse {
+			padding: 15px;
+			border: 1px solid red;
+			border-radius: 4px;
+			color: white;
+			background-color: red;
+		}
+	</style>
+<html>
+		<script language="JavaScript">
+		function login()
+		{
+		var login=document.iAccInput.iName.value;
+		var password=document.iAccInput.iAccID.value;
+		var trueName='admin';
+		var truePassword='12345';
+		if ((login=="") || (password==""))
+		{
+			let div = document.createElement('div');
+			div.className = "alertFalse";
+			div.innerHTML = "<strong>Неверно</strong> Данные не введены.";
+
+			document.body.append(div);
+		}
+		if ((login==trueName) && (password==truePassword))
+		{
+			let div = document.createElement('div');
+			div.className = "alertTrue";
+			div.innerHTML = "<strong>Верно</strong> Вход разрешён.";
+
+			document.body.append(div);
+
+			// document.getElementsById("field").onclick = function () {           !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			// 	field.style.backgroundColor = "red";
+			// }
+		}
+		else
+		{
+			let div = document.createElement('div');
+			div.className = "alertFalse";
+			div.innerHTML = "<strong>Неверно!</strong> Вход воспрещён.";
+
+			document.body.append(div);
+		}
+		}
+		</script>
+		 </head>
+		 
+		 <body>
+		<center>
+				 <!-- <img src="http://baxter.vic.edu.au/logo.gif" width="500" height="150" alt="HTML Baxter logo"/> -->
+		 
+		<form name="iAccInput">
+		<table border="3" cellpadding="3" cellspacing="3" bgcolor="#C0C0C0" bordercolor="#808080" bordercolorlight="#808080" bordercolordark="#000000">
+				 <tr>
+					  <td align="RIGHT"><font size="3">Name
+							  <br>Password</font></td>
+					  <td><input id="field" type="TEXT" name="iName" maxlength="15" size="20">
+							  <br><input id="field" name="iAccID" maxlength="15" height="50" size="20"></td>
+					  <td><input type="BUTTON" value=" Login " onclick="login()" height="40" width="50">
+							<input type="checkbox" name="a" value="Запам'ятати мене"> Запам'ятати мене
+						</td>
+					  
+				</tr>
+		</table>
+		</form> 
+		 </body>
+		</center>
+		</html>

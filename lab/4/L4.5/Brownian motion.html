@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Простая анимация</title>
+
+    <script type="text/javascript">
+        var div1;
+        var leftPos = 1000;
+        var rightPos = 550;
+        var leftPos2 = 1000;
+        var rightPos2 = 550;
+        var leftPos3 = 1000;
+        var rightPos3 = 550;
+
+        window.onload = function () {
+            div1 = document.getElementById("div1");
+            div2 = document.getElementById("div2");
+            div3 = document.getElementById("div3");
+            setInterval(animate, 300);
+        }
+
+        function animate() {
+            div1.style.left = leftPos + "px";
+            div2.style.left = leftPos2 + "px";
+            div3.style.left = leftPos3 + "px";
+
+            div1.style.top = rightPos + "px";
+            div2.style.top = rightPos2 + "px";
+            div3.style.top = rightPos3 + "px";
+            
+            leftPos += Math.floor(Math.random()*100);
+            rightPos += Math.floor(Math.random() * 101);
+            leftPos -= Math.floor(Math.random()*100);
+            rightPos -= Math.floor(Math.random() * 101);
+
+            leftPos2 += Math.floor(Math.random()*100);
+            rightPos2 += Math.floor(Math.random() * 101);
+            leftPos2 -= Math.floor(Math.random()*100);
+            rightPos2 -= Math.floor(Math.random() * 101);
+
+            leftPos3 += Math.floor(Math.random()*100);
+            rightPos3 += Math.floor(Math.random() * 101);
+            leftPos3 -= Math.floor(Math.random()*100);
+            rightPos3-= Math.floor(Math.random() * 101);
+            
+            div1.style.transition = "all 0.2s"
+            div2.style.transition = "all 0.2s"
+            div3.style.transition = "all 0.2s"
+        }
+    </script>
+</head>
+<body>
+    <div id="div1"
+        style="height: 30px; width: 30px; background-color: red; position: relative;">
+    </div>
+    <div id="div2"
+        style="height: 30px; width: 30px; background-color: Green; position: relative;">
+    </div>
+    <div id="div3"
+        style="height: 30px; width: 30px; background-color: Blue; position: relative;">
+    </div>
+</body>
+</html>

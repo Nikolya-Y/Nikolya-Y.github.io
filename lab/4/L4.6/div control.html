@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>L4.1</title>
+</head>
+<style>
+    div {
+        height: 100px;
+        width: 100px;
+        background-color: rgb(44, 9, 77);
+        border: 10px solid black;
+        color: rgb(255, 255, 255);
+    }
+    #control {
+        width: 300px;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        border: none;
+    }
+    #block {
+        position: relative;
+    }
+</style>
+<body>
+    <div id="control">
+        <div id="arrowDOWN"><h1>DOWN</h1></div>
+        <div id="arrowLEFT"><h1>LEFT</h1></div>
+        <div id="arrowUP"><h1>UP</h1></div>
+        <div id="arrowRIGHT"><h1>RIGHT</h1></div>
+    </div>
+    <div id="block"></div>
+</body>
+<script>
+    var block;
+    var leftPos = 500,
+        downPos = 350;
+
+        window.onload = function animate() {
+
+                document.getElementById("arrowDOWN").onclick = function () {
+                    block = document.getElementById("block");    
+                    block.style.top = downPos + "px";
+                    downPos+=100;
+                }
+                document.getElementById("arrowLEFT").onclick = function () {
+                    block = document.getElementById("block");    
+                    block.style.left = leftPos + "px";
+                    leftPos+=100;
+                } 
+                document.getElementById("arrowUP").onclick = function () {
+                    block = document.getElementById("block");    
+                    block.style.top = downPos + "px";
+                    downPos+=-100;
+                }
+                document.getElementById("arrowRIGHT").onclick = function () {
+                    block = document.getElementById("block");    
+                    block.style.left = leftPos + "px";
+                    leftPos+=-100;
+                }  
+        }
+
+
+    
+</script>
+</html>
