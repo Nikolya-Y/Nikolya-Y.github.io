@@ -9,7 +9,10 @@ $(document).ready(function(){
       });
 });
 
+alert(aria-valuetext);
 
-var pltime = player.getCurrentTime();
 
-console.log(pltime);
+
+
+
+//поиск нужного элемента
