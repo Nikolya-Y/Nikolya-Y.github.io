@@ -1,6 +1,6 @@
 $(document).ready(function(){
      $('.owl-carousel').owlCarousel({
-          items:2,
+          items:1,
           merge:true,
           loop:true,
           margin:10,
