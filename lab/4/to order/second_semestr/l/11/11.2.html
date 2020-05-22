@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  // 2
+  let operator_ask;
+
+operator_ask = prompt("Введите оператор в формате 1 это '+', 2 '-', 3 '*', 4 '/' ");
+second_task(operator_ask);
+function second_task(operator) {
+    if (operator == 1) {
+        add();
+    } else if (operator == 2) {
+        sub();
+    } else if (operator == 3) {
+        mul();
+    } else if (operator == 4) {
+        div();
+    } else {
+        alert("Введите корректное значение");
+    }
+}
+function add(first, second, third) {
+    first = prompt("Enter first nubmer");
+    second = prompt("Enter second nubmer");
+    let result = first + second;
+    alert(result);
+}
+function sub(first, second, third) {
+    first = prompt("Enter first nubmer");
+    second = prompt("Enter second nubmer");
+    let result = first - second;
+    alert(result);
+}
+function mul(first, second, third) {
+    first = prompt("Enter first nubmer");
+    second = prompt("Enter second nubmer");
+    let result = first * second;
+    alert(result);
+}
+function div(first, second, third) {
+    first = prompt("Enter first nubmer");
+    second = prompt("Enter second nubmer");
+    let result = first / second;
+    if (second == 0) {
+        alert("Деление на ноль запрещено")
+    } else {
+        alert(result);
+    }
+}
+    </script>
+</body>
+</html>

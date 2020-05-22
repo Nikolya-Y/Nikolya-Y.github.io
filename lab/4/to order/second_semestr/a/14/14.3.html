@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+    <button id="btn">Button</button>
+    
+    <script>
+
+(function() {
+
+var box, btn, createParagraph, handler;
+
+box = document.querySelector('#box');
+btn = document.querySelector('#btn');
+
+createParagraph = function(text) {
+
+    var p  = document.createElement('p');
+
+    p.textContent = text;
+
+    box.appendChild(p);
+
+};
+
+handler = function() {
+
+    if (box.children.length === 10) {
+        box.innerHTML = '';
+    }
+    else {
+        createParagraph('Lorem Ipsum');
+    }
+
+};
+
+btn.addEventListener('click', handler);
+
+})();
+
+    </script>
+</body>
+</html>

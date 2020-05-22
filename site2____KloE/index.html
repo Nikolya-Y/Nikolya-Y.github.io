@@ -7,6 +7,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap" rel="stylesheet">
 	<!-- font-family: 'Raleway', sans-serif; -->
 	<link rel="stylesheet" href="css/normalize.css">
+
+	<link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/slider.css">
 	<title>Shop – Kloe</title>
@@ -316,14 +320,32 @@
 	</div>
 	<footer>
 		<div class="content__main__gallery">
-			<a href=""><img src="img/1.jpg" alt=""></a>
-			<a href=""><img src="img/2.jpg" alt=""></a>
-			<a href=""><img src="img/3.jpg" alt=""></a>
-			<a href=""><img src="img/4.jpg" alt=""></a>
-			<a href=""><img src="img/5.jpg" alt=""></a>
-			<a href=""><img src="img/6.jpg" alt=""></a>
-			<a href=""><img src="img/7.jpg" alt=""></a>
-			<a href=""><img src="img/8.jpg" alt=""></a>
+			<div class="owl-carousel ">
+				<div class="image__wrapper">
+					<img class="minimized " src="img/1.jpg" alt="">
+				</div>
+				<div class="image__wrapper">
+					<img class="minimized "  src="img/2.jpg" alt="">
+				</div>				
+				<div class="image__wrapper">
+					<img class="minimized "  src="img/3.jpg" alt="">
+				</div class="image__wrapper">
+				<div>
+					<img class="minimized " src="img/4.jpg" alt="">
+				</div>
+				<div>
+					<img class="minimized "  src="img/5.jpg" alt="">
+				</div>
+				<div>
+					<img class="minimized "  src="img/6.jpg" alt="">
+				</div>
+				<div>
+					<img class="minimized "  src="img/7.jpg" alt="">
+				</div>
+				<div>
+					<img class="minimized "src="img/8.jpg" alt="">
+				</div>
+			</div>
 		</div>
 		<div class="footer__info">
 			<div class="footer__info__col1">
@@ -427,5 +449,53 @@
 			<a href="">Copyright © Select Themes</a>
 		</div>
 	</footer>
+	<script src="jquery.min.js"></script>
+	<script src="owlcarousel/owl.carousel.min.js"></script>
+
+	<!-- //карусель  -->
+	<script>
+		$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:0,
+	nav:false,
+	mouseDrag: true,
+    responsive:{
+        0:{
+            items:3 //здесь АНАЛОГИЧНО
+        },
+        600:{
+            items:5	//при разрешении экрана 600 и больше 6 картинок видимых на странице
+        },
+        1000:{
+            items:6 //при разрешении экрана 1000 и больше 6 картинок видимых на странице
+        }
+    }
+});
+
+
+
+//galery класс minimized для любого изображения
+$(function(){
+  $('.minimized').click(function(event) {
+    var i_path = $(this).attr('src');
+    $('body').append('<div id="overlay"></div><div id="magnify"><img src="'+i_path+'"><div id="close-popup"><i></i></div></div>');
+    $('#magnify').css({
+	    left: ($(document).width() - $('#magnify').outerWidth())/2,
+	    // top: ($(document).height() - $('#magnify').outerHeight())/2 upd: 24.10.2016
+            top: ($(window).height() - $('#magnify').outerHeight())/2
+	  });
+    $('#overlay, #magnify').fadeIn('fast');
+  });
+  
+  $('body').on('click', '#close-popup, #overlay', function(event) {
+    event.preventDefault();
+ 
+    $('#overlay, #magnify').fadeOut('fast', function() {
+      $('#close-popup, #magnify, #overlay').remove();
+    });
+  });
+});
+ 
+	</script>
 </body>
 </html>

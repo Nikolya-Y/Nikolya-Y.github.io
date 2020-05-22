@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Box = function (name,material) {
+            this.name = name;
+            this.material = material;
+        this.Volume = function (heigh, width, depth){
+            this.heigh = heigh;
+            this.width = width;
+            this.depth = depth;
+            console.log('Объем коробки ', heigh*width*depth);
+        }
+        this.equals = function (compareWith){
+            console.log('Сравнение ', this.material === compareWith.material);
+        }
+        
+        
+        }
+        var Box1 = new Box (Box1,"wood");
+        console.log('Материал коробки 1 - ', Box1.material);
+        Box1.Volume(5, 15, 25);
+        var Box2 = new Box (Box2, 'steel');
+        console.log('Материал коробки 2 - ', Box2.material);
+        Box1.Volume(5, 10, 25);
+        Box1.equals(Box2);
+
+    </script>
+</body>
+</html>

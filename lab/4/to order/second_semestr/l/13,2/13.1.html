@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let Box = function ( material, name) {
+        this.material = material;
+        this.name = name;
+    this.Volume = function (heigh, width, depth){
+        this.depth = depth;
+        this.heigh = heigh;
+        this.width = width;
+        console.log('Eql',depth*heigh*width);
+    }
+    this.eql = function (sravnenue){
+        console.log('Eql',this.material === sravnenue.material);
+    }
+    }
+    let Box1 = new Box ("metal", Box1);
+    let Box2 = new Box ('plastik', Box2);
+    console.log('Box1.material', Box1.material);
+    Box1.Volume(456, 54,23);
+    console.log('Box2.material', Box2.material);
+    Box1.Volume(456, 54,23);
+    Box1.eql(Box2);
+    </script>
+</body>
+</html>

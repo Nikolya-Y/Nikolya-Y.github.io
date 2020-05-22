@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dues the number</title>
+<style>
+body{
+	font-family:verdana;
+	color:#444;
+}
+#wrap{
+    width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    font-size: 18px;
+    border: 3px solid #9ea5a9;
+}
+#info{
+	margin-bottom: 10px;
+}
+#answer{
+    width: 60px;
+    font-size: 24px;
+}
+#send{
+    font-size: 24px;
+    color: #fff;
+    background: #3C8FB7;
+    padding: 4px 8px;
+    border: 0;
+    cursor: pointer;
+}
+</style>
+<script type="text/javascript">
+
+	var randomNum = Math.round((Math.random() * (9999 - 1000) + 1000));
+	var countStep = 1;
+	
+	function checkAnswer(){
+
+		var info;
+		var answer = document.getElementById('answer');
+		var result = Math.abs(randomNum - answer.value);
+
+		if( result == 0 ){
+			info = 'True';
+			answer.style.display = 'none';
+			document.getElementById('send').style.display = 'none';
+		}else if( result < 10 ){
+			info = 'Very hot';
+		}else if( result < 100 ){
+			info = 'Hot';
+		}else if( result < 1000 ){
+			info = 'Cold';
+		}else{
+			info = 'Too cold';
+		}
+
+		document.getElementById('info').innerHTML += '<p>#' + countStep + ' Ansver: ' + answer.value + ' - ' + info + '</p>';
+		answer.value = '';
+		countStep++;
+	}
+</script>
+</head>
+<body>
+
+	<div id="wrap">		
+		<div id="info">4 digit number:</div>
+		<input id="answer">
+		<button id="send" onclick="checkAnswer()">Ansver</button>
+	</div>
+</body>
+</html>

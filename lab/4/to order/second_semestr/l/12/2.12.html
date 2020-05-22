@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var documenT = {
+    theme: 'empty',
+    body: 'empty',
+    footer: 'empty',
+    date: 'empty',
+    addon: {
+        theme: 'empty',
+        body: 'empty',
+        footer: 'empty',
+        date: 'empty'    
+    }
+};
+      function start () {
+            documenT.theme = prompt("Введіть тему");
+            documenT.body = prompt("Введіть тіло");
+            documenT.footer = prompt("Введіть футер");
+            documenT.date = prompt("Введіть дату");
+            document.write(documenT.theme + '<br>');
+            document.write(documenT.body + '<br>');
+            document.write(documenT.footer + '<br>');
+            document.write(documenT.date + '<br>');
+
+        }
+        start();
+    </script>
+</body>
+</html>

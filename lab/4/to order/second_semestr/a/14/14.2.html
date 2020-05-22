@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>sdfsdfsdfsdf</p>
+    <p>osdfisodonsof</p>
+    <p>sofigjspdofj</p>
+    <p>spfdoggjopaefdjn</p>
+    <p>spfogjsginjop</p>
+    
+    <button class="button">convert</button>
+    <script>
+        const M = {}
+
+        M.convert = () => {
+        const textList = document.querySelectorAll('p');
+        [...textList].forEach((item) => {
+            item.innerText = 'PARAGRAPH';
+        })
+        }
+
+        const convertButton = document.querySelector('.button');
+        convertButton.addEventListener('click', M.convert);
+
+
+       
+    </script>
+</body>
+</html>

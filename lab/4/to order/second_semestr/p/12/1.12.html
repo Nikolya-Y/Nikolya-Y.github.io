@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 id = 'mangr'>
+        <h3 id = 'name'></h3>
+        <h3 id = 'surname'></h3>
+        <h3 id = 'age'></h3>
+    </h2>
+
+    <h2 id = 'secrt'>
+        <h3 id = 'nameS'></h3>
+        <h3 id = 'surnameS'></h3>
+        <h3 id = 'ageS'></h3>
+    </h2>
+
+
+
+    <script>
+        var manager = {
+    name: 'Vika',
+    surname: 'petrychenko',
+    age: 0
+};
+
+
+function Secretary(age) {
+    this.name = 'Vika',
+    this.surname = 'petrychenko', 
+    this.age = 0
+};
+
+var secretary = new Secretary ("1"); //
+
+
+    document.getElementById('mangr').innerHTML = 'Manager:';
+    document.getElementById('name').innerHTML = manager.name;
+    document.getElementById('surname').innerHTML = manager.surname;
+    document.getElementById('age').innerHTML = manager.age;
+    document.getElementById('secrt').innerHTML = 'Secretary:';
+    document.getElementById('nameS').innerHTML = secretary.name;
+    document.getElementById('surnameS').innerHTML = secretary.surname;
+    document.getElementById('ageS').innerHTML = secretary.age;
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Конструктор Function()</title>
+
+    <script type="text/javascript">
+        
+    function Box(height, width, depth, material) {
+		this.height = height;
+		this.width = width;
+		this.depth = depth;
+		this.material = material;
+		}
+			
+			Box.prototype.volume = function(){
+				return this.height*this.width*this.depth;
+			}
+			
+			Box.prototype.equals = function(otherObj){
+				if (this.material === otherObj.material) {
+                return true;
+            }
+            return false;
+			}
+		
+	var box1 = new Box(10, 20, 30, 'сталь');
+	var box2 = new Box(50, 60, 40, 'золото');
+	var vol = box1.volume();
+	document.write("об’єм box1 = " + vol + "<br /> ");
+						
+	var res = box1.equals(box2);
+	document.write("Материал одинаковый? - " + res);
+		
+    </script>
+
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class = redButton>sdf3e23efs</div>
+<p class = redButton>sdf3e23efs</p>
+<h3 class = redButton>sdf3e23efs</h3>
+
+<script>
+var elems = {};
+elems.getElems = function (className) {
+	this.className = className;
+	var elemArray = [];
+	var elemList = document.body.children;
+	for (var i = 0; i < elemList.length; i++) {
+		
+		if(elemList[i].getAttribute("class") === this.className)
+			elemArray.push(elemList[i]);
+	}
+	return elemArray;
+}
+document.write("<br>" + elems.getElems('redButton'));
+</script>
+</body>
+</html>

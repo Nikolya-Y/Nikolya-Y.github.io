@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Конструктор Function()</title>
+
+    <script type="text/javascript">
+        
+     function Human(name, sex, age) {
+		this.name = name;
+		this.sex = sex;
+		this.age = age;		
+		}
+			
+	    Human.prototype.compareTo = function (otherObject) {
+		return this.age - otherObject.age;
+		}	
+			
+		var human1 = new Human('Sam', 'm', 41);
+		var human2 = new Human('Viktor', 'm', 37);
+		var human3 = new Human('Viktoriya', 'w', 38);
+			
+		var humans = [human1, human2, human3];
+		var h;
+		for(var i = 0; i < humans.length - 1; i++){
+			for(var j = 0; j < humans.length; j++){
+				if(humans[i].compareTo(humans[i + 1]) > 0){
+					h = humans[i];
+					humans[i] = humans[i + 1];
+					humans[i + 1] = h;
+				}
+			}
+		}
+		   for(var i = 0; i < humans.length; i++){
+		document.write(humans[i].name + " " + humans[i].age + "<br />");
+		}
+    </script>
+
+</head>
+<body>
+</body>
+</html>

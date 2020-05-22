@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+	<p class="class1">lorem5</p>
+	<p class="class2">lorem5</p>
+	<p class="class3">lorem5</p>
+	<p class="class4">lorem5</p>
+
+	<div class="class1">lorem6</div>
+	<div class="class2">lorem6</div>
+	<div class="class3">lorem6</div>
+	<div class="class4">lorem6</div>
+
+	<em class="class1">lorem7</em>
+	<em class="class2">lorem7</em>
+	<em class="class3">lorem7</em>
+	<em class="class4">lorem7</em>
+
+
+<script>
+var elems = {};
+
+elems.getElems = function (className) {
+	this.className = className;
+	var elemArray = [];
+	var elemList = document.body.children;
+
+	for (var i = 0; i < elemList.length; i++) {
+		
+		if(elemList[i].getAttribute("class") === this.className)
+			elemArray.push(elemList[i]);
+	}
+	return elemArray;
+}
+
+document.write("<br>" + elems.getElems('class2'));
+</script>
+</body>
+</html>

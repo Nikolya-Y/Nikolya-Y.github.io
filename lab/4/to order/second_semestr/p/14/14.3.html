@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="addParagraph" onclick="handler()"/>
+    <div id="div1">div1txt</div>
+    <script>
+        var i = 0;
+        var ourDiv = document.querySelector('div');
+        var ourBut = document.querySelector('input');
+        ourBut.addEventListener('click', function(){
+            if (i < 10){
+                let newElem = document.createElement('p');
+                let newText = document.createTextNode('Paragraph ' + i);
+                newElem.appendChild(newText);
+                ourDiv.appendChild(newElem);
+                i++;
+            } else {
+                let ourNewDivs = document.querySelectorAll('div p');
+                for (let i = 0; i < ourNewDivs.length; i++){
+                ourNewDivs[i].remove();
+                };
+            };
+        });
+    </script>
+</body>
+</html>

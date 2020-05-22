@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function () {
+            function Func (name) {
+                this.name = name;
+            }
+            Func.prototype.method = function () {
+                return this.name;
+            }
+            var obj = new Func('newName');
+            obj.newProp = 'endName';
+            obj.newMethod = function () {
+                return obj.newProp;
+            };
+            document.write(obj.name);
+            document.write(obj.method());
+            document.write(obj.newProp);
+            document.write(obj.newMethod());
+            } ());
+    </script>
+</body>
+</html>

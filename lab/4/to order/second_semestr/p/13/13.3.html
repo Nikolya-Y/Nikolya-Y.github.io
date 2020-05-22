@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Human(name, sex, lang, age) {
+        this.name = name;
+        this.sex = sex;
+        this.lang = lang;
+        this.age = age;
+        }
+
+        Human.prototype.eldest = function(humans) {
+            var maxAge = 0;
+            humans.forEach(function(human) {
+            if (human.age > maxAge)
+                maxAge = human.age;
+        });
+            alert(maxAge);
+        };
+
+        var human = new Human();
+        var humans = [];
+        humans.push(new Human("Ken", "male", "eng", 28));
+        humans.push(new Human("Pol", "male", "eng", 22));
+        humans.push(new Human("July", "female", "uk", 25));
+        humans.push(new Human("Bill", "male", "rus", 36));
+        
+        human.eldest(humans);
+
+    </script>
+</body>
+</html>

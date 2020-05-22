@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// 4. Розробіть функцію-конструктор, яка буде створювати об'єкт Human
+// (людина) створіть масив об'єктів і реалізуйте функцію, яка буде сортувати
+// елементи масиву за значенням властивості Age по зростанням або за
+// спаданням.
+// 5. Розробіть функцію-конструктор, яка буде створювати об'єкт Human
+// (людина) додайте на свій розсуд властивості і методи в цей об'єкт. Подумайте
+// які методи і властивості слід зробити рівня екземпляра, а які рівня функціїконструктора
+
+///////НАПИСАТЬ СВОЙ ОТВЕТ
+///// на уровне екземпляра методы и свойства нужны те что касаются только екземпляра, а на уровне функции конструктора те, что касаются многих екземпляров 
+        function Human(name, sex, lang, age) {
+            this.name = name;
+            this.sex = sex;
+            this.lang = lang;
+            this.age = age;
+
+        }
+
+        var Ken = new Human('Ken', 'male', 'eng', 28);
+        var Pol = new Human('Pol', 'male', 'eng', 22);
+        var Maria = new Human('Maria', 'Female', 'rus', 74);
+        var July = new Human('July', 'male', 'uk', 25);
+        var Bill = new Human('Bill', 'male', 'rus', 36);
+
+        var People = [Ken, Pol, July, Bill, Maria];
+        
+        for (var i = 0; i < People.length;i++) {
+            document.write("Все что находится в массиве: " + People[i].name + " | " + People[i].sex + " | " + People[i].lang + " | " + People[i].age + "<br />");
+        }
+
+        function SortByAge(array, order) { // order = 'asc'-по возрастанию || 'desc'-по убыванию
+            if (order == "asc") {
+                document.write("Находим самого страрого" + "<br />");
+                var maxValue = Number.NEGATIVE_INFINITY;
+                var maxVname = "";
+                for (var i = 0; i < array.length; i++) {
+                    if (array[i].age > maxValue) {
+                        maxValue = array[i].age;
+                        maxVname = array[i].name;
+            }
+        }
+                return document.write("Имя: " + maxVname + "<br />" + " Возраст: " + maxValue);
+        } else if (order == "desc") {
+                document.write("Находим самого младшего" + "<br />");
+                var minVelue = Number.POSITIVE_INFINITY;
+                var minVname = "";
+                for (var i = 0; i < array.length; i++) {
+                    if (array[i].age < minVelue) {
+                        minVelue = array[i].age;
+                        minVname = array[i].name;
+        }
+        }
+                return document.write("Имя: " + minVname + "<br />" + " Возраст: " + minVelue);;
+        } else {
+                document.write("error!");
+        }
+        };
+
+        SortByAge(People, 'asc');// order = 'asc' || 'desc'
+
+
+    </script>
+</body>
+</html>

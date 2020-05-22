@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+	<h1 class="qwerty">lorem5</h1>
+	<h2 class="qwerty2">lorem5</h2>
+	<h3 class="qwerty3">lorem5</h3>
+	<h4 class="qwerty4">lorem5</h4>
+
+	<h5 class="qwerty1">lorem6</h5>
+	<h6 class="qwerty2">lorem6</h6>
+	<h7 class="qwerty3">lorem6</h7>
+	<h8 class="qwerty4">lorem6</h8>
+
+
+<script>
+var elems = {};
+elems.getElements = function (classNm) {
+	this.classNm = classNm;
+	var elemArr = [];
+	var elemList = document.body.children;
+
+	for (var i = 0; i < elemList.length; i++) {
+		
+		if(elemList[i].getAttribute("class") === this.classNm)
+			elemArr.push(elemList[i]);
+	}
+	return elemArr;
+}
+
+document.write("<br>" + elems.getElements('qwerty4'));
+</script>
+</body>
+</html>

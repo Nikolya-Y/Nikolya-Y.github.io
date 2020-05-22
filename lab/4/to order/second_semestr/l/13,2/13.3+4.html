@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Human(name, eyeColor, lang, age) {
+            this.name = name;
+            this.lang = lang;
+            this.eyeColor = eyeColor;
+            this.age = age;
+            }
+        Human.prototype.old = function(humans) {
+            let maxAge = 0;
+            humans.forEach(function(human) {
+                if (human.age > maxAge)
+                    maxAge = human.age;
+            });
+            alert(maxAge);
+        };
+        let human = new Human();
+        let humans = [];
+        humans.push(new Human("Nik","by", "brown",  18));
+        humans.push(new Human("John", "eng","green",  50));
+        humans.push(new Human("Marth","uk", "brown",  30));
+        humans.push(new Human("Margaret","by", "blue",  60));
+        human.old(humans);
+    </script>
+</body>
+</html>

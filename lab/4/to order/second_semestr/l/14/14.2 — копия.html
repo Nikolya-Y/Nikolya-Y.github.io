@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dignissimos asperiores quasi quo vel accusamus reprehenderit eligendi, assumenda modi ipsam quod sed dicta, expedita deleniti repellat dolorem saepe? Mollitia, quia.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dignissimos asperiores quasi quo vel accusamus reprehenderit eligendi, assumenda modi ipsam quod sed dicta, expedita deleniti repellat dolorem saepe? Mollitia, quia.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dignissimos asperiores quasi quo vel accusamus reprehenderit eligendi, assumenda modi ipsam quod sed dicta, expedita deleniti repellat dolorem saepe? Mollitia, quia.</p>
+
+    <script>
+        var selectr = document.querySelectorAll('p');
+
+        var firstModule = {}; 
+
+        firstModule.name = "MODULEone"; 
+
+        firstModule.selectr = function () {
+            for (i=0; i < selectr.length; i++) {
+                selectr[i].innerHTML = "PARAGRAPH";
+            }
+        }
+
+        firstModule.selectr();
+        
+        
+      
+    </script>
+</body>
+</html>

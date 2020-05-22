@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //5. Розробіть функцію-конструктор, яка буде створювати об'єкт Human
+        //(людина) додайте на свій розсуд властивості і методи в цей об'єкт. Подумайте
+        // які методи і властивості слід зробити рівня екземпляра, а які рівня функціїконструктора.
+        function Human(name, sex, lang, age, iq) {
+        this.name = name;
+        this.sex = sex;
+        this.lang = lang;
+        this.age = age;
+        this.iq = iq; //добавлено iq согласно заданию, на уровне екземпляра то что касается только екзщемпляра, а на уровне функции конструктора то, что касается многих екземпляров
+        this.iq_lvl = function (compareWith){
+            console.log('Сравнение ', this.iq === compareWith.iq);
+        }
+        }
+
+        Human.prototype.eldest = function(humans) {
+            var maxAge = 0;
+            humans.forEach(function(human) {
+            if (human.age > maxAge)
+                maxAge = human.age;
+        });
+            alert(maxAge);
+        };
+
+        var human = new Human();
+        var humans = [];
+        humans.push(new Human("Ken", "male", "eng", 28));
+        humans.push(new Human("Pol", "male", "eng", 22));
+        humans.push(new Human("July", "female", "uk", 25));
+        humans.push(new Human("Bill", "male", "rus", 36));
+        
+        human.eldest(humans);
+        
+    </script>
+</body>
+</html>

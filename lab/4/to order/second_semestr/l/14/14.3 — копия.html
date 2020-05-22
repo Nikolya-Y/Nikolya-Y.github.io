@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div id="div1"></div>
+	<input type="button" onclick="createParagraph()" value="click">
+
+
+    <script>
+function createParagraph() {
+  var div1 = document.getElementById('div1');
+	var pars = document.createElement('p');
+
+	pars.innerHTML = 'Some2ext';
+
+	if (div1.children.length === 10) {
+		
+    while(div1.firstChild) {
+      div1.removeChild(div1.firstChild)
+    }
+    
+    return;
+  }
+
+	div1.appendChild(pars);
+}       
+    </script>
+</body>
+</html>

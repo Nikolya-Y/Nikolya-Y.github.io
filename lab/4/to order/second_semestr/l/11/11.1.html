@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1
+        let num_for_calculate_one, num_for_calculate_two, num_for_calculate_three;
+        num_for_calculate_one = prompt("enter a num_for_calculate_one");
+        num_for_calculate_two = prompt("enter a num_for_calculate_two");
+        num_for_calculate_three = prompt("enter a num_for_calculate_three");
+        calculate(num_for_calculate_one, num_for_calculate_two, num_for_calculate_three);
+        function calculate(first, second, third) {
+            let result = (Number(first) + Number(second) + Number(third))/3;
+            alert(result);
+        }
+    </script>
+</body>
+</html>

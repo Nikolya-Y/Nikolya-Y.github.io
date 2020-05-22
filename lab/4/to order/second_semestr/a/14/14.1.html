@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1234567890</p>
+    <p>0987654321</p>
+    <p>1234567890</p>
+    <p>/.,mnbvcxz</p>
+    <a href="#">qazwsxedc</a>
+    <p>0987654321</p>
+    <a href="#">xswzaqcde</a>
+    <p>1234567890</p>      
+    <a href="#">rfvbgtyhnn</a></br></br>
+    <div id="test_div">dpggmwpefongertuogbqwfjgerpighwpiefh</div></br>
+    <input type="button" onclick="selectParagraph()" value="параграфы">
+    <input type="button" onclick="selectLink()" value="ссылки">
+    <input type="button" onclick="selectDiv()" value="div">
+
+    <script>
+        function selectLink() {
+    var link = document.getElementsByTagName("a"),
+        i = 0;
+    for (; i < link.length; i++) {
+        link[i].setAttribute("style", "border:3px solid green;");
+    }
+}
+        function selectDiv(){
+            var blockDiv = document.getElementById("test_div");
+            blockDiv.setAttribute("style","border:3px solid red;");
+        }
+
+
+
+function selectParagraph(){
+    var link = document.getElementsByTagName("p"),
+        i = 0;
+    for (; i < link.length; i++) {
+        link[i].setAttribute("style", "border:3px solid blue;");
+    }
+}
+    </script>
+</body>
+</html>

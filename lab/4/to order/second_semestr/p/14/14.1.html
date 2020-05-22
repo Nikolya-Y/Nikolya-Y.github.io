@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>. Додати сторінку, розмістить на сторінці в довільному порядку кілька
+        параграфів, посилань і елемент div з id = test_div.</p>
+    <a href="#">Зробіть код JS
+        ненав'язливим.</a>
+    <p>. Додати сторінку, розмістить на сторінці в довільному порядку кілька
+        параграфів, посилань і елемент div з id = test_div.</p>
+    <a href="#">Зробіть код JS
+        ненав'язливим.</a>
+    <p>. Додати сторінку, розмістить на сторінці в довільному порядку кілька
+        параграфів, посилань і елемент div з id = test_div.</p>      
+    <a href="#">Зробіть код JS
+        ненав'язливим.</a></br></br>
+    <div id="test_div">
+        При натисканні на кожну кнопку повинна запускатися функція-обробник, яка
+додасть рамку певного кольору на відповідні елементи.
+    </div></br>
+    <input type="button" onclick="selectParagraph()" value="вибрати всі параграфи">
+    <input type="button" onclick="selectLink()" value="вибрати всі посилання">
+    <input type="button" onclick="selectDiv()" value="«вибрати div">
+
+    <script>
+        function selectDiv(){
+            var blockDiv = document.getElementById("test_div");
+            blockDiv.setAttribute("style","border:3px solid red;");
+        }
+
+
+        function selectLink() {
+            var link = document.getElementsByTagName("a"),
+                i = 0;
+            for (; i < link.length; i++) {
+                link[i].setAttribute("style", "border:3px solid green;");
+            }
+        }
+
+        function selectParagraph(){
+            var link = document.getElementsByTagName("p"),
+                i = 0;
+            for (; i < link.length; i++) {
+                link[i].setAttribute("style", "border:3px solid blue;");
+            }
+        }
+    </script>
+</body>
+</html>
