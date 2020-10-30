@@ -3,29 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Univercity VR Project</title>
-    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <title>Document</title>
     <link rel="stylesheet" href="main.css">
-    
 </head>
-<body >
-    <div class="owl-carousel owl-theme">
-        <div class="item-video sect_1" data-merge="1"><a class="owl-video" href="https://youtu.be/Lz9m42nXZ9g"></a></div>
-        <div class="item-video sect_2" data-merge="1"><a class="owl-video" href="https://youtu.be/Lz9m42nXZ9g"></a></div>
-        <div class="item-video sect_3" data-merge="1"><a class="owl-video" href="https://youtu.be/Lz9m42nXZ9g"></a></div>
-        <div class="item-video sect_4" data-merge="1"><a class="owl-video" href="https://youtu.be/Lz9m42nXZ9g"></a></div>
-        <div class="item-video sect_5" data-merge="1"><a class="owl-video" href="https://youtu.be/Lz9m42nXZ9g"></a></div>
-        <div class="item-video sect_6" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=qhLExhpXX0E"></a></div>
-    </div>
+<body>
+    <main>
+        <section>
+          <div class="center">
+      
+            <div id="YouTube-player"></div>
+      
+            <div>
+              <span class="nowrap"> 
+                <button onclick="document.getElementById('YouTube-video-id').value='yG0oBPtyNb0'; youTubePlayerChangeVideoId();" title="In the summertime (Mungo Jerry)">1</button>
+                <button onclick="document.getElementById('YouTube-video-id').value='F2Ug3VkFuDw'; youTubePlayerChangeVideoId();" title="Peter Popoff pris la main dans le sac par James Randi">2</button>
+                <button onclick="document.getElementById('YouTube-video-id').value='1X9RvuSuU_Y'; youTubePlayerChangeVideoId();" title="The Steven Seagal Show #002">3</button>
+                <button onclick="document.getElementById('YouTube-video-id').value='LHdsMXEwLNE'; youTubePlayerChangeVideoId();" title="The Man from Earth (Richard Schenkman)">4</button>
+              </span>
+      
+              <span class="nowrap margin-left-m margin-right-m"><!-- убрать ввод айди видео -->
+                <label for="YouTube-video-id">videoId</label>:
+                <input id="YouTube-video-id" type="text" value="yG0oBPtyNb0" size="12" pattern="[_\-0-9A-Za-z]{11}" onchange="youTubePlayerChangeVideoId();">
+              </span>
+      
+              <span class="nowrap"><!-- убрать упр видео -->
+                <button onclick="youTubePlayerPlay();">Play</button>
 
-    
-
-<script src="jquery.js"></script>
-<script src="owlcarousel/owl.carousel.min.js"></script>
-<script src="script.js"></script>
+              </span>
+            </div>
+      
+            <div><!-- для модификации (сонхрон тайкод)-->
+              <input id="YouTube-player-progress" type="range" value="0" min="0" max="100" onchange="youTubePlayerCurrentTimeChange(this.value);" oninput="youTubePlayerCurrentTimeSlide();"> 
+              <label for="YouTube-player-progress">duration</label>
+            </div>
+      
+            <div><!-- убрать упр звуком-->
+              <input id="YouTube-player-volume" type="range" value="50" min="0" max="100" onchange="youTubePlayerVolumeChange(this.value);">
+              <label for="YouTube-player-volume">volume</label>
+            </div>
+          </div>
+      
+          <div class="framed"> <!-- информационный раздел, взять теккущий тайкод, убрать -->
+            <div id="YouTube-player-infos"></div>
+            <div id="YouTube-player-errors"></div>
+            <div id="YouTube-player-fixed-infos"></div>
+          </div>
+        </section>
+      
+      </main>
+      <script src="script.js"></script>
 </body>
 </html>
-
-
