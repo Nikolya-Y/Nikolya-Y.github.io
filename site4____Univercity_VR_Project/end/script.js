@@ -43,7 +43,7 @@ function onYouTubeIframeAPIReady() {
                                    width: width,
                                    playerVars: {'autohide': 0,
                                                 'cc_load_policy': 0,
-                                                'controls': 2,
+                                                'controls': 1,
                                                 'disablekb': 1,
                                                 'iv_load_policy': 3,
                                                 'modestbranding': 1,
