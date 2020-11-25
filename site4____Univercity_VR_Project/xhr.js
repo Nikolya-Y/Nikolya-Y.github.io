@@ -30,10 +30,44 @@ sendRequest('GET', requestURL)
   .catch(err => console.log(err))
 
 const body = {
-  name: 'Vladilen',
-  age: 26
-}
+    first: [
+      {
+        id: 'RuTM3OHuAfo'
+      }
+    ],
+    second: [
+      {
+        id: 'RuTM3OHuAfo'
+      }
+    ],
+    third: [
+      {
+        id: 'RuTM3OHuAfo'
+      }
+    ],
+    fourth: [
+      {
+        id: 'RuTM3OHuAfo'
+      }
+    ],
+    fifth: [
+      {
+        id: 'RuTM3OHuAfo'
+      }
+    ],
+    sixth: [
+      {
+        id: 'RuTM3OHuAfo'
+      }
+    ],
+    seventh: [
+      {
+        id: 'RuTM3OHuAfo'
+      }
+    ]
+  }
 
 sendRequest('POST', requestURL, body)
   .then(data => console.log(data))
   .catch(err => console.log(err))
+
