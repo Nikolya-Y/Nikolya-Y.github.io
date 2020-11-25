@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Работа с YouTube API, сохранение таймкода при переключении между видео для создания эффекта виар "наоборот"</title>
+  <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <div class="content">
+        <div class="main">
+            <div class="player">
+            <div id="YouTube-player"></div>
+            <div>
+                <span class="nowrap margin-left-m margin-right-m"><!-- убрать видимость айди видео -->
+                <input id="YouTube-video-id" type="text" value="rEf8ZmyF6LQ" size="12">
+                </input>
+            </div>
+            </div>
+            <div class="nav">
+            <img src="map.png" alt="map"usemap="#image-map">
+
+            <map name="image-map">
+                <area onclick="document.getElementById('YouTube-video-id').value='M_5HjxHp0AE'; youTubePlayerChangeVideoId();" onclick="document.getElementById('YouTube-video-id').value='M_5HjxHp0AE'; youTubePlayerChangeVideoId();" target="" alt="" title="" href="#" coords="0,427,82,269,402,270,376,428" shape="poly">
+                <area onclick="document.getElementById('YouTube-video-id').value='vn7AC43cmZ0'; youTubePlayerChangeVideoId();" target="" alt="" title="" href="#" coords="443,426,687,428,666,268,458,271" shape="poly">
+                <area onclick="document.getElementById('YouTube-video-id').value='DUjfh1caNGg'; youTubePlayerChangeVideoId();" target="" alt="" title="" href="#" coords="728,269,754,428,1126,427,1038,269" shape="poly">
+                <area onclick="document.getElementById('YouTube-video-id').value='FMi_m9-e9MU'; youTubePlayerChangeVideoId();" target="" alt="" title="" href="#" coords="116,225,252,95,437,95,404,228" shape="poly">
+                <area onclick="document.getElementById('YouTube-video-id').value='hmBI8JNzPTk'; youTubePlayerChangeVideoId();" target="" alt="" title="" href="#" coords="496,96,463,224,659,225,630,96" shape="poly">
+                <area onclick="document.getElementById('YouTube-video-id').value='1wAaI_6b9JE'; youTubePlayerChangeVideoId();" target="" alt="" title="" href="#" coords="687,97,723,226,1006,225,863,97" shape="poly">
+                <area onclick="document.getElementById('YouTube-video-id').value='hI9CaQD7P6I'; youTubePlayerChangeVideoId();" target="" alt="" title="" href="#" coords="308,51,433,-1,695,-1,815,55" shape="poly">
+            </map>
+            </div>
+        </div>
+        <div class="contol_panel">
+            <div class="previev_navigation">
+                <div class="previev">
+                    <div>
+                        <img src="https://i.ytimg.com/an_webp/7lxZoh9-G_8/mqdefault_6s.webp?du=3000&sqp=CJC3-v0F&rs=AOn4CLDhc5E1xLWrMZu8msJD01g0adKDvA" alt="">
+                    </div>
+                    <div>
+                        <img src="https://i.ytimg.com/an_webp/7lxZoh9-G_8/mqdefault_6s.webp?du=3000&sqp=CJC3-v0F&rs=AOn4CLDhc5E1xLWrMZu8msJD01g0adKDvA" alt="">
+                        <img src="https://i.ytimg.com/an_webp/7lxZoh9-G_8/mqdefault_6s.webp?du=3000&sqp=CJC3-v0F&rs=AOn4CLDhc5E1xLWrMZu8msJD01g0adKDvA" alt="">
+                        <img src="https://i.ytimg.com/an_webp/7lxZoh9-G_8/mqdefault_6s.webp?du=3000&sqp=CJC3-v0F&rs=AOn4CLDhc5E1xLWrMZu8msJD01g0adKDvA" alt="">
+                    </div>
+                    <div>
+                        <img src="https://i.ytimg.com/an_webp/7lxZoh9-G_8/mqdefault_6s.webp?du=3000&sqp=CJC3-v0F&rs=AOn4CLDhc5E1xLWrMZu8msJD01g0adKDvA" alt="">
+                        <img src="https://i.ytimg.com/an_webp/7lxZoh9-G_8/mqdefault_6s.webp?du=3000&sqp=CJC3-v0F&rs=AOn4CLDhc5E1xLWrMZu8msJD01g0adKDvA" alt="">
+                        <img src="https://i.ytimg.com/an_webp/7lxZoh9-G_8/mqdefault_6s.webp?du=3000&sqp=CJC3-v0F&rs=AOn4CLDhc5E1xLWrMZu8msJD01g0adKDvA" alt="">
+                    </div>
+                </div>
+                <button id="btn_back">BACK</button>
+                <button id="btn_forward">FORWARD</button>
+            </div>
+            <div class="manage_id">
+                <div>
+                    <input id="one" type="text" name="" id="">
+                </div>
+                <div>
+                    <input id="two" type="text" name="" id="">
+                    <input id="second" type="text" name="" id="">
+                    <input id="third" type="text" name="" id="">
+                </div>
+                <div>
+                    <input id="fourth" type="text" name="" id="">
+                    <input id="fifth" type="text" name="" id="">
+                    <input id="sixth" type="text" name="" id="">
+                </div>
+                <button id="btn_send_id">SEND</button>
+            </div>
+        </div>
+    </div>
+  <script src="script.js"></script>
+  <script src="xhr.js" ></script>
+  
+</body>
+</html>

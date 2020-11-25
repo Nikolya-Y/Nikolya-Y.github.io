@@ -1,0 +1,27 @@
+*{
+    background-color: black;
+    color: gray;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  input {
+    color: #2D2D2D;
+  }
+
+
+
+
+.contol_panel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.previev  {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
