@@ -25,11 +25,11 @@ function sendRequest(method, url, body = null) {
   })
 }
 
-sendRequest('GET', requestURL)
-  .then(data => console.log(data))
-  .catch(err => console.log(err))
+// sendRequest('GET', requestURL)
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err))
 
-const body = {
+let body = {
     first: [
       {
         id: 'RuTM3OHuAfo'
@@ -65,9 +65,39 @@ const body = {
         id: 'RuTM3OHuAfo'
       }
     ]
-  }
+  };
+// sendRequest('POST', requestURL, body)
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err))
 
-sendRequest('POST', requestURL, body)
-  .then(data => console.log(data))
-  .catch(err => console.log(err))
 
+let first = document.getElementById("first").value;
+let second = document.getElementById("second").value;
+let third = document.getElementById("third").value;
+let fourth = document.getElementById("fourth").value;
+let fifth = document.getElementById("fifth").value;
+let sixth = document.getElementById("sixth").value;
+let seventh = document.getElementById("seventh").value;
+
+btn_send_id.onclick = function () {
+    sendRequest('POST', requestURL, body)
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
+    console.log('SEND');
+}
+
+UPDATE.onclick = function previous_list_id() {
+    sendRequest('GET', requestURL, body)
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
+    console.log('UPDATE');
+}
+
+
+DELETE_ID_DATA.onclick = function DELETE_ID_DATA() {
+    console.log('yes');
+    sendRequest('DELETE', requestURL)
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
+    console.log('DELETE');
+}
