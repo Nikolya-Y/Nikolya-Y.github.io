@@ -40,17 +40,11 @@ let SEND_list_2 = {
 
 };
 let SEND_list_3 = {
-  list3: [
-      document.getElementById("first").value,
-      document.getElementById("second").value,
-      document.getElementById("third").value,
-      document.getElementById("fourth").value,
-      document.getElementById("fifth").value,
-      document.getElementById("sixth").value,
-      document.getElementById("seventh").value
-  ]
-};
 
+};
+let SEND_list_4 = {
+
+};
 
 
 CONFIRM.onclick = function CONFIRM() {
@@ -67,6 +61,14 @@ CONFIRM.onclick = function CONFIRM() {
         document.getElementById("seventh").value
     ]
     };
+    for (i=1; i<8; i++) {
+      id_tag = area_0 + i;
+      console.log(id_tag);
+      id_vids = "get_id[0].list1[" + i + "]";
+      console.log(id_vids);
+      // id_tag.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='"+ id_vids +"'; youTubePlayerChangeVideoId();");
+    };
+    
   } else if (select_cheker == "second") {
     SEND_list_2 = {
       list2: [
