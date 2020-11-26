@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let req = new XMLHttpRequest();
+
+req.onreadystatechange = () => {
+  if (req.readyState == XMLHttpRequest.DONE) {
+    console.log(req.responseText);
+  }
+};
+
+req.open("PUT", "https://api.jsonbin.io/b/5fbef0189abe4f6e7cabc051", true);
+req.setRequestHeader("secret-key", "$2b$10$oQxB4V9FekBvgi2eZXDFaeqX3Uy2CvgFDBTGUgNcxiyNbgUQpE2sK", "Content-Type", "application/json");
+req.send('{"Sample": "Hello World"}');
+    </script>
+</body>
+</html>

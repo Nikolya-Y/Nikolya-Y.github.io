@@ -1,4 +1,5 @@
-const requestURL = 'https://jsonplaceholder.typicode.com/users'
+
+const requestURL = "http://localhost:3000/main"
 
 function sendRequest(method, url, body = null) {
   return new Promise((resolve, reject) => {
@@ -6,8 +7,8 @@ function sendRequest(method, url, body = null) {
 
     xhr.open(method, url)
 
-    xhr.responseType = 'json'
-    xhr.setRequestHeader('Content-Type', 'application/json')
+    xhr.responseType = "json"
+    xhr.setRequestHeader("Content-Type", "application/json")
 
     xhr.onload = () => {
       if (xhr.status >= 400) {
@@ -25,79 +26,91 @@ function sendRequest(method, url, body = null) {
   })
 }
 
-// sendRequest('GET', requestURL)
+// sendRequest("GET", requestURL)
 //   .then(data => console.log(data))
 //   .catch(err => console.log(err))
 
 let body = {
-    first: [
+    "first": [
       {
-        id: 'RuTM3OHuAfo'
+        "id": "RuTM3OHuAfo"
       }
     ],
-    second: [
+    "second": [
       {
-        id: 'RuTM3OHuAfo'
+        "id": "RuTM3OHuAfo"
       }
     ],
-    third: [
+    "third": [
       {
-        id: 'RuTM3OHuAfo'
+        "id": "RuTM3OHuAfo"
       }
     ],
-    fourth: [
+    "fourth": [
       {
-        id: 'RuTM3OHuAfo'
+        "id": "RuTM3OHuAfo"
       }
     ],
-    fifth: [
+    "fifth": [
       {
-        id: 'RuTM3OHuAfo'
+        "id": "RuTM3OHuAfo"
       }
     ],
-    sixth: [
+    "sixth": [
       {
-        id: 'RuTM3OHuAfo'
+        "id": "RuTM3OHuAfo"
       }
     ],
-    seventh: [
+    "seventh": [
       {
-        id: 'RuTM3OHuAfo'
+        "id": "RuTM3OHuAfo"
       }
     ]
   };
-// sendRequest('POST', requestURL, body)
+
+first.onchange = function () {
+    first = document.getElementById("first").value;
+    body = {
+        first: [
+          {
+            id: "RuTM3OHuAfo"
+          }
+        ]};
+    console.log(body);
+};
+// sendRequest("POST", requestURL, body)
 //   .then(data => console.log(data))
 //   .catch(err => console.log(err))
 
 
-let first = document.getElementById("first").value;
-let second = document.getElementById("second").value;
-let third = document.getElementById("third").value;
-let fourth = document.getElementById("fourth").value;
-let fifth = document.getElementById("fifth").value;
-let sixth = document.getElementById("sixth").value;
-let seventh = document.getElementById("seventh").value;
+// let first = document.getElementById("first").value;
+// let second = document.getElementById("second").value;
+// let third = document.getElementById("third").value;
+// let fourth = document.getElementById("fourth").value;
+// let fifth = document.getElementById("fifth").value;
+// let sixth = document.getElementById("sixth").value;
+// let seventh = document.getElementById("seventh").value;
 
 btn_send_id.onclick = function () {
-    sendRequest('POST', requestURL, body)
+    sendRequest("POST", requestURL, body)
     .then(data => console.log(data))
     .catch(err => console.log(err));
-    console.log('SEND');
+    console.log("SEND");
 }
 
 UPDATE.onclick = function previous_list_id() {
-    sendRequest('GET', requestURL, body)
+    sendRequest("GET", requestURL)
     .then(data => console.log(data))
     .catch(err => console.log(err));
-    console.log('UPDATE');
+    console.log("UPDATE");
 }
 
 
 DELETE_ID_DATA.onclick = function DELETE_ID_DATA() {
-    console.log('yes');
-    sendRequest('DELETE', requestURL)
+    console.log("yes");
+    sendRequest("DELETE", requestURL)
     .then(data => console.log(data))
     .catch(err => console.log(err));
-    console.log('DELETE');
+    console.log("DELETE");
 }
+
