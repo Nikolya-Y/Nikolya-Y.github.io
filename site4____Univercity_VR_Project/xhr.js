@@ -61,14 +61,17 @@ CONFIRM.onclick = function CONFIRM() {
         document.getElementById("seventh").value
     ]
     };
-    for (i=1; i<8; i++) {
-      id_tag = area_0 + i;
-      console.log(id_tag);
-      id_vids = "get_id[0].list1[" + i + "]";
-      console.log(id_vids);
-      // id_tag.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='"+ id_vids +"'; youTubePlayerChangeVideoId();");
-    };
-    
+
+    area_01.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[0] + "'; youTubePlayerChangeVideoId();");
+    area_02.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[1] + "'; youTubePlayerChangeVideoId();");
+    area_03.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[2] + "'; youTubePlayerChangeVideoId();");
+    area_04.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[3] + "'; youTubePlayerChangeVideoId();");
+    area_05.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[4] + "'; youTubePlayerChangeVideoId();");
+    area_06.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[5] + "'; youTubePlayerChangeVideoId();");
+    area_07.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[6] + "'; youTubePlayerChangeVideoId();");
+
+    //xhr.js:69 Uncaught TypeError: id_tag.setAttribute is not a functionat HTMLButtonElement.CONFIRM (xhr.js:69)
+        
   } else if (select_cheker == "second") {
     SEND_list_2 = {
       list2: [
@@ -81,6 +84,15 @@ CONFIRM.onclick = function CONFIRM() {
           document.getElementById("seventh").value
       ]
     };
+console.log(get_id[1].list2[0]);
+    area_01.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[1].list2[0] + "'; youTubePlayerChangeVideoId();");
+    area_02.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[1].list2[1] + "'; youTubePlayerChangeVideoId();");
+    area_03.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[1].list2[2] + "'; youTubePlayerChangeVideoId();");
+    area_04.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[1].list2[3] + "'; youTubePlayerChangeVideoId();");
+    area_05.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[1].list2[4] + "'; youTubePlayerChangeVideoId();");
+    area_06.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[1].list2[5] + "'; youTubePlayerChangeVideoId();");
+    area_07.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[1].list2[6] + "'; youTubePlayerChangeVideoId();");
+
   } else if (select_cheker == "third") {
     SEND_list_3 = {
       list3: [
@@ -93,6 +105,14 @@ CONFIRM.onclick = function CONFIRM() {
           document.getElementById("seventh").value
       ]
     };
+    area_01.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[2].list3[0] + "'; youTubePlayerChangeVideoId();");
+    area_02.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[2].list3[1] + "'; youTubePlayerChangeVideoId();");
+    area_03.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[2].list3[2] + "'; youTubePlayerChangeVideoId();");
+    area_04.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[2].list3[3] + "'; youTubePlayerChangeVideoId();");
+    area_05.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[2].list3[4] + "'; youTubePlayerChangeVideoId();");
+    area_06.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[2].list3[5] + "'; youTubePlayerChangeVideoId();");
+    area_07.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[2].list3[6] + "'; youTubePlayerChangeVideoId();");
+
   } else if (select_cheker == "fourth") {
     SEND_list_4 = {
       list4: [
@@ -105,6 +125,14 @@ CONFIRM.onclick = function CONFIRM() {
           document.getElementById("seventh").value
       ]
     };
+    area_01.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[3].list4[0] + "'; youTubePlayerChangeVideoId();");
+    area_02.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[3].list4[1] + "'; youTubePlayerChangeVideoId();");
+    area_03.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[3].list4[2] + "'; youTubePlayerChangeVideoId();");
+    area_04.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[3].list4[3] + "'; youTubePlayerChangeVideoId();");
+    area_05.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[3].list4[4] + "'; youTubePlayerChangeVideoId();");
+    area_06.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[3].list4[5] + "'; youTubePlayerChangeVideoId();");
+    area_07.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[3].list4[6] + "'; youTubePlayerChangeVideoId();");
+
   } 
 }
 
