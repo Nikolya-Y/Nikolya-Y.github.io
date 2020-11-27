@@ -70,6 +70,14 @@ CONFIRM.onclick = function CONFIRM() {
     area_06.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[5] + "'; youTubePlayerChangeVideoId();");
     area_07.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[6] + "'; youTubePlayerChangeVideoId();");
 
+    first.setAttribute("value", + get_id[0].list1[0] );
+    second.setAttribute("value", + get_id[0].list1[1] );
+    third.setAttribute("value", + get_id[0].list1[2] );
+    fourth.setAttribute("value", + get_id[0].list1[3] );
+    fifth.setAttribute("value", + get_id[0].list1[4] );
+    sixth.setAttribute("value", + get_id[0].list1[5] );
+    seventh.setAttribute("value", + get_id[0].list1[6]);
+
     //xhr.js:69 Uncaught TypeError: id_tag.setAttribute is not a functionat HTMLButtonElement.CONFIRM (xhr.js:69)
         
   } else if (select_cheker == "second") {
@@ -84,7 +92,6 @@ CONFIRM.onclick = function CONFIRM() {
           document.getElementById("seventh").value
       ]
     };
-console.log(get_id[1].list2[0]);
     area_01.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[1].list2[0] + "'; youTubePlayerChangeVideoId();");
     area_02.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[1].list2[1] + "'; youTubePlayerChangeVideoId();");
     area_03.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[1].list2[2] + "'; youTubePlayerChangeVideoId();");
@@ -92,6 +99,15 @@ console.log(get_id[1].list2[0]);
     area_05.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[1].list2[4] + "'; youTubePlayerChangeVideoId();");
     area_06.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[1].list2[5] + "'; youTubePlayerChangeVideoId();");
     area_07.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[1].list2[6] + "'; youTubePlayerChangeVideoId();");
+
+    first.setAttribute("value", get_id[1].list2[0]);
+    second.setAttribute("value", + get_id[1].list2[1]);
+    third.setAttribute("value", + get_id[1].list2[2]);
+    fourth.setAttribute("value", + get_id[1].list2[3]);
+    fifth.setAttribute("value", + get_id[1].list2[4]);
+    sixth.setAttribute("value", + get_id[1].list2[5]);
+    seventh.setAttribute("value", + get_id[1].list2[6]);
+    console.log(document.getElementById("seventh").value);
 
   } else if (select_cheker == "third") {
     SEND_list_3 = {
@@ -113,6 +129,14 @@ console.log(get_id[1].list2[0]);
     area_06.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[2].list3[5] + "'; youTubePlayerChangeVideoId();");
     area_07.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[2].list3[6] + "'; youTubePlayerChangeVideoId();");
 
+    first.setAttribute("value", + get_id[2].list3[0]);
+    second.setAttribute("value", + get_id[2].list3[1]);
+    third.setAttribute("value", + get_id[2].list3[2]);
+    fourth.setAttribute("value", + get_id[2].list3[3]);
+    fifth.setAttribute("value", + get_id[2].list3[4]);
+    sixth.setAttribute("value", + get_id[2].list3[5]);
+    seventh.setAttribute("value", + get_id[2].list3[6]);
+
   } else if (select_cheker == "fourth") {
     SEND_list_4 = {
       list4: [
@@ -133,6 +157,14 @@ console.log(get_id[1].list2[0]);
     area_06.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[3].list4[5] + "'; youTubePlayerChangeVideoId();");
     area_07.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[3].list4[6] + "'; youTubePlayerChangeVideoId();");
 
+    first.setAttribute("value", + get_id[3].list4[0]);
+    second.setAttribute("value", + get_id[3].list4[1]);
+    third.setAttribute("value", + get_id[3].list4[2]);
+    fourth.setAttribute("value", + get_id[3].list4[3]);
+    fifth.setAttribute("value", + get_id[3].list4[4]);
+    sixth.setAttribute("value", + get_id[3].list4[5]);
+    seventh.setAttribute("value", + get_id[3].list4[6]);
+
   } 
 }
 
@@ -141,7 +173,9 @@ btn_send_id.onclick = function btn_send_id() {
   SEND_list = [
     SEND_list_1, SEND_list_2, SEND_list_3, SEND_list_4
   ];
-    sendRequest("PUT", requestURL, SEND_list)
+  console.log(SEND_list_1);
+  console.log(SEND_list);
+    sendRequest("POST", requestURL, SEND_list)
     .then(data => console.log(data))
     .catch(err => console.log(err));
     console.log("SEND");
