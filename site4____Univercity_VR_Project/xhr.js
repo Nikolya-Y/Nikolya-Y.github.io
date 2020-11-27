@@ -1,35 +1,36 @@
-let get_id;
+
 const requestURL = "http://localhost:3000/main";
+
+var get_id = {
+
+}
 
 function sendRequest(method, url, body = null) {
   return new Promise((resolve, reject) => {
-    const xhr = new XMLHttpRequest()
+    const xhr = new XMLHttpRequest();
 
-    xhr.open(method, url)
+    xhr.open(method, url);
 
-    xhr.responseType = "json"
-    xhr.setRequestHeader("Content-Type", "application/json")
+    xhr.responseType = "json";
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    get_id = xhr.response;
 
     xhr.onload = () => {
       if (xhr.status >= 400) {
-        reject(xhr.response)
+        reject(xhr.response);
       } else {
-        resolve(xhr.response)
+        resolve(xhr.response);
       }
-      get_id = xhr.response;
-      // for (let i = 0; i < Object.keys(get_id.first).length; i++) {
-      //   console.log("yes");
-      // }
-
     }
 
     xhr.onerror = () => {
-      reject(xhr.response)
-    }
+      reject(xhr.response);
+    };
 
-    xhr.send(JSON.stringify(body))
+    xhr.send(JSON.stringify(body));
     
-  })
+  });
 }
 
 
@@ -170,57 +171,11 @@ CONFIRM.onclick = function CONFIRM() {
 
 
 btn_send_id.onclick = function btn_send_id() {
-  // SEND_list = [
-  //   SEND_list_1, SEND_list_2, SEND_list_3, SEND_list_4
-  // ];
   SEND_list = [
-    {
-      "list1": [
-        "1",
-        "1",
-        "1",
-        "1",
-        "1",
-        "1",
-        "1"
-      ]
-    },
-    {
-      "list2": [
-        "2",
-        "2",
-        "2",
-        "2",
-        "2",
-        "2",
-        "2"
-      ]
-    },
-    {
-      "list3": [
-        "3",
-        "3",
-        "3",
-        "3",
-        "3",
-        "3",
-        "3"
-      ]
-    },
-    {
-      "list4": [
-        "4",
-        "4",
-        "4",
-        "4",
-        "4",
-        "4",
-        "4"
-      ]
-    }
+    SEND_list_1, SEND_list_2, SEND_list_3, SEND_list_4
   ];
-  console.log(SEND_list);
-    sendRequest("PUT", requestURL, SEND_list)
+    console.log(SEND_list);
+    sendRequest("POST", requestURL, SEND_list)
     .then(data => console.log(data))
     .catch(err => console.log(err));
     console.log("SEND");
