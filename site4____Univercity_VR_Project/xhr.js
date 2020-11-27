@@ -1,9 +1,7 @@
+var get_id;
 
 const requestURL = "http://localhost:3000/main";
 
-var get_id = {
-
-}
 
 function sendRequest(method, url, body = null) {
   return new Promise((resolve, reject) => {
@@ -14,14 +12,14 @@ function sendRequest(method, url, body = null) {
     xhr.responseType = "json";
     xhr.setRequestHeader("Content-Type", "application/json");
 
-    get_id = xhr.response;
-
+    
     xhr.onload = () => {
       if (xhr.status >= 400) {
         reject(xhr.response);
       } else {
         resolve(xhr.response);
       }
+      get_id = xhr.response;
     }
 
     xhr.onerror = () => {
@@ -62,7 +60,8 @@ CONFIRM.onclick = function CONFIRM() {
         document.getElementById("seventh").value
     ]
     };
-
+    console.log(get_id[0].list1[0]+"get");
+    console.log("asdasda");
     area_01.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[0] + "'; youTubePlayerChangeVideoId();");
     area_02.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[1] + "'; youTubePlayerChangeVideoId();");
     area_03.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[2] + "'; youTubePlayerChangeVideoId();");
@@ -71,13 +70,13 @@ CONFIRM.onclick = function CONFIRM() {
     area_06.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[5] + "'; youTubePlayerChangeVideoId();");
     area_07.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[6] + "'; youTubePlayerChangeVideoId();");
 
-    first.setAttribute("value", + get_id[0].list1[0] );
-    second.setAttribute("value", + get_id[0].list1[1] );
-    third.setAttribute("value", + get_id[0].list1[2] );
-    fourth.setAttribute("value", + get_id[0].list1[3] );
-    fifth.setAttribute("value", + get_id[0].list1[4] );
-    sixth.setAttribute("value", + get_id[0].list1[5] );
-    seventh.setAttribute("value", + get_id[0].list1[6]);
+    first.setAttribute("value",get_id[0].list1[0] );
+    second.setAttribute("value",get_id[0].list1[1] );
+    third.setAttribute("value",get_id[0].list1[2] );
+    fourth.setAttribute("value",get_id[0].list1[3] );
+    fifth.setAttribute("value",get_id[0].list1[4] );
+    sixth.setAttribute("value",get_id[0].list1[5] );
+    seventh.setAttribute("value",get_id[0].list1[6]);
 
     //xhr.js:69 Uncaught TypeError: id_tag.setAttribute is not a functionat HTMLButtonElement.CONFIRM (xhr.js:69)
         
@@ -102,12 +101,12 @@ CONFIRM.onclick = function CONFIRM() {
     area_07.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[1].list2[6] + "'; youTubePlayerChangeVideoId();");
 
     first.setAttribute("value", get_id[1].list2[0]);
-    second.setAttribute("value", + get_id[1].list2[1]);
-    third.setAttribute("value", + get_id[1].list2[2]);
-    fourth.setAttribute("value", + get_id[1].list2[3]);
-    fifth.setAttribute("value", + get_id[1].list2[4]);
-    sixth.setAttribute("value", + get_id[1].list2[5]);
-    seventh.setAttribute("value", + get_id[1].list2[6]);
+    second.setAttribute("value",get_id[1].list2[1]);
+    third.setAttribute("value",get_id[1].list2[2]);
+    fourth.setAttribute("value",get_id[1].list2[3]);
+    fifth.setAttribute("value",get_id[1].list2[4]);
+    sixth.setAttribute("value",get_id[1].list2[5]);
+    seventh.setAttribute("value",get_id[1].list2[6]);
     console.log(document.getElementById("seventh").value);
 
   } else if (select_cheker == "third") {
@@ -130,13 +129,13 @@ CONFIRM.onclick = function CONFIRM() {
     area_06.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[2].list3[5] + "'; youTubePlayerChangeVideoId();");
     area_07.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[2].list3[6] + "'; youTubePlayerChangeVideoId();");
 
-    first.setAttribute("value", + get_id[2].list3[0]);
-    second.setAttribute("value", + get_id[2].list3[1]);
-    third.setAttribute("value", + get_id[2].list3[2]);
-    fourth.setAttribute("value", + get_id[2].list3[3]);
-    fifth.setAttribute("value", + get_id[2].list3[4]);
-    sixth.setAttribute("value", + get_id[2].list3[5]);
-    seventh.setAttribute("value", + get_id[2].list3[6]);
+    first.setAttribute("value",get_id[2].list3[0]);
+    second.setAttribute("value",get_id[2].list3[1]);
+    third.setAttribute("value",get_id[2].list3[2]);
+    fourth.setAttribute("value",get_id[2].list3[3]);
+    fifth.setAttribute("value",get_id[2].list3[4]);
+    sixth.setAttribute("value",get_id[2].list3[5]);
+    seventh.setAttribute("value",get_id[2].list3[6]);
 
   } else if (select_cheker == "fourth") {
     SEND_list_4 = {
@@ -158,13 +157,13 @@ CONFIRM.onclick = function CONFIRM() {
     area_06.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[3].list4[5] + "'; youTubePlayerChangeVideoId();");
     area_07.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[3].list4[6] + "'; youTubePlayerChangeVideoId();");
 
-    first.setAttribute("value", + get_id[3].list4[0]);
-    second.setAttribute("value", + get_id[3].list4[1]);
-    third.setAttribute("value", + get_id[3].list4[2]);
-    fourth.setAttribute("value", + get_id[3].list4[3]);
-    fifth.setAttribute("value", + get_id[3].list4[4]);
-    sixth.setAttribute("value", + get_id[3].list4[5]);
-    seventh.setAttribute("value", + get_id[3].list4[6]);
+    first.setAttribute("value",get_id[3].list4[0]);
+    second.setAttribute("value",get_id[3].list4[1]);
+    third.setAttribute("value",get_id[3].list4[2]);
+    fourth.setAttribute("value",get_id[3].list4[3]);
+    fifth.setAttribute("value",get_id[3].list4[4]);
+    sixth.setAttribute("value",get_id[3].list4[5]);
+    seventh.setAttribute("value",get_id[3].list4[6]);
 
   } 
 }
