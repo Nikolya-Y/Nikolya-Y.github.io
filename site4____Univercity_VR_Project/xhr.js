@@ -175,7 +175,7 @@ btn_send_id.onclick = function btn_send_id() {
   ];
   console.log(SEND_list_1);
   console.log(SEND_list);
-    sendRequest("POST", requestURL, SEND_list)
+    sendRequest("PUT", requestURL, SEND_list)
     .then(data => console.log(data))
     .catch(err => console.log(err));
     console.log("SEND");
@@ -191,22 +191,3 @@ UPDATE.onclick = function previous_list_id() {
 }
 
 
-// first.onchange = function () {
-//     first = document.getElementById("first").value;
-//     body.second = {
-//       qwwerwe
-//     }
-//     console.log(body);
-// };
-
-
-// console.log("get_id");
-
-
-// document.getElementById("first").value,
-// document.getElementById("second").value,
-// document.getElementById("third").value,
-// document.getElementById("fourth").value,
-// document.getElementById("fifth").value,
-// document.getElementById("sixth").value,
-// document.getElementById("seventh").value
