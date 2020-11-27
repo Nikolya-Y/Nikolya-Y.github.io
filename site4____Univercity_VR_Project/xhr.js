@@ -1,5 +1,5 @@
 let get_id;
-const requestURL = "http://localhost:3000/main"
+const requestURL = "http://localhost:3000/main";
 
 function sendRequest(method, url, body = null) {
   return new Promise((resolve, reject) => {
@@ -170,10 +170,55 @@ CONFIRM.onclick = function CONFIRM() {
 
 
 btn_send_id.onclick = function btn_send_id() {
+  // SEND_list = [
+  //   SEND_list_1, SEND_list_2, SEND_list_3, SEND_list_4
+  // ];
   SEND_list = [
-    SEND_list_1, SEND_list_2, SEND_list_3, SEND_list_4
+    {
+      "list1": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "list2": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ]
+    },
+    {
+      "list3": [
+        "3",
+        "3",
+        "3",
+        "3",
+        "3",
+        "3",
+        "3"
+      ]
+    },
+    {
+      "list4": [
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4"
+      ]
+    }
   ];
-  console.log(SEND_list_1);
   console.log(SEND_list);
     sendRequest("PUT", requestURL, SEND_list)
     .then(data => console.log(data))
