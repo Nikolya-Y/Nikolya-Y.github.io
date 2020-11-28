@@ -23,7 +23,7 @@ function onYouTubeIframeAPIReady() {
                               videoId: videoId
                              });
         player.pauseVideo();
-        youTubePlayerDisplayFixedInfos();
+        // youTubePlayerDisplayFixedInfos();
     }
 
 
@@ -83,7 +83,7 @@ function youTubePlayerChangeVideoId() {
                                });
     
     youTubePlayer.playVideo();
-    youTubePlayerDisplayFixedInfos();
+    // youTubePlayerDisplayFixedInfos();
 }
 
 
