@@ -1,6 +1,7 @@
 *{
     background-color: black;
     color: gray;
+    margin: 0;
   }
   .main {
     display: flex;
@@ -10,11 +11,6 @@
   input {
     color: #2D2D2D;
   }
-
-  .nav {
-      margin-bottom: 2rem;
-  }
-
 
 
 .contol_panel {
