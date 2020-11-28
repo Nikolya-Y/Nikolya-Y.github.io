@@ -50,25 +50,22 @@ CONFIRM.onclick = function CONFIRM() {
   select_cheker = document.getElementById("select_cheker").value;
   if (select_cheker == "first") {
     SEND_list_1 = {
-      list1: [
-        document.getElementById("first").value,
-        document.getElementById("second").value,
-        document.getElementById("third").value,
-        document.getElementById("fourth").value,
-        document.getElementById("fifth").value,
-        document.getElementById("sixth").value,
-        document.getElementById("seventh").value
-    ]
+      "q1" : document.getElementById("first").value,
+      "q2" : document.getElementById("second").value,
+      "q3" : document.getElementById("third").value,
+      "q4" : document.getElementById("fourth").value,
+      "q5" : document.getElementById("fifth").value,
+      "q6" : document.getElementById("sixth").value,
+      "q7" : document.getElementById("seventh").value 
     };
-    console.log(get_id[0].list1[0]+"get");
-    console.log("asdasda");
-    area_01.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[0] + "'; youTubePlayerChangeVideoId();");
-    area_02.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[1] + "'; youTubePlayerChangeVideoId();");
-    area_03.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[2] + "'; youTubePlayerChangeVideoId();");
-    area_04.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[3] + "'; youTubePlayerChangeVideoId();");
-    area_05.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[4] + "'; youTubePlayerChangeVideoId();");
-    area_06.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[5] + "'; youTubePlayerChangeVideoId();");
-    area_07.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].list1[6] + "'; youTubePlayerChangeVideoId();");
+    console.log(get_id[0].q1+"get");
+    area_01.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].q1 + "'; youTubePlayerChangeVideoId();");
+    area_02.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].q2 + "'; youTubePlayerChangeVideoId();");
+    area_03.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].q3 + "'; youTubePlayerChangeVideoId();");
+    area_04.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].q4 + "'; youTubePlayerChangeVideoId();");
+    area_05.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].q5 + "'; youTubePlayerChangeVideoId();");
+    area_06.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].q6 + "'; youTubePlayerChangeVideoId();");
+    area_07.setAttribute("onclick", "document.getElementById('YouTube-video-id').value='" + get_id[0].q7 + "'; youTubePlayerChangeVideoId();");
 
     first.setAttribute("value",get_id[0].list1[0] );
     second.setAttribute("value",get_id[0].list1[1] );
@@ -82,6 +79,7 @@ CONFIRM.onclick = function CONFIRM() {
         
   } else if (select_cheker == "second") {
     SEND_list_2 = {
+      id: 1,
       list2: [
           document.getElementById("first").value,
           document.getElementById("second").value,
@@ -111,6 +109,7 @@ CONFIRM.onclick = function CONFIRM() {
 
   } else if (select_cheker == "third") {
     SEND_list_3 = {
+      id: 2,
       list3: [
           document.getElementById("first").value,
           document.getElementById("second").value,
@@ -139,6 +138,7 @@ CONFIRM.onclick = function CONFIRM() {
 
   } else if (select_cheker == "fourth") {
     SEND_list_4 = {
+      id: 3,
       list4: [
           document.getElementById("first").value,
           document.getElementById("second").value,
@@ -170,11 +170,9 @@ CONFIRM.onclick = function CONFIRM() {
 
 
 btn_send_id.onclick = function btn_send_id() {
-  SEND_list = [
-    SEND_list_1, SEND_list_2, SEND_list_3, SEND_list_4
-  ];
+  SEND_list = SEND_list_1;
     console.log(SEND_list);
-    sendRequest("POST", requestURL, SEND_list)
+    sendRequest("PUT", requestURL, SEND_list)
     .then(data => console.log(data))
     .catch(err => console.log(err));
     console.log("SEND");
