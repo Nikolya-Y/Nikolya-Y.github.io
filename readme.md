@@ -25,15 +25,17 @@ Status:only desctop, 100%
 <hr>
 
 [Project #](KappeHome)
-Status:only desctop, 100%
+Status:only desctop, 1920x1080, 100%
 Верста из PSD как лаба студента
 
 <hr>
 
 [Project #](NeworMedia)
-Status:only desctop, 100%
+Status:only desctop, 1920x1080, 100%
 Верстка из Behanсe по картинке как лаба студента
 
+<hr>
+
 [Project #](NeworMedia(v2))
-Status:only desctop, 100%
+Status:only desctop, 1920x1080, 100%
 Верстка из Behanсe по картинке как лаба студента но с правками (по желанию "заказчика" переделал)
