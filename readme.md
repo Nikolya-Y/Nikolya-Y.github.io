@@ -18,7 +18,7 @@ Link to origin site: PSD file in project directory
 
 <hr>
 
-[Project #](google)<br>
+[Project #](Nikolya-Y.github.io/google/index.html) google<br>
 Status:only desctop, 100%<br>
 Максимально простая страницу как лаба студента
 
