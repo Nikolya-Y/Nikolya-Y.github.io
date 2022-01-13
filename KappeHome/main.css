@@ -1,0 +1,242 @@
+@font-face {
+    font-family: "Soho Gothic Pro"; 
+    src: url("//db.onlinewebfonts.com/t/1b6fc211ac8965244816cc37de9fbe77.eot");
+    font-family: "FontAwesome";
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2") format("woff2");
+    font-family: 'Roboto', sans-serif;
+    src: url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap);
+}
+
+/* @font-face {
+    font-family: "FontAwesome";
+    font-weight: normal;
+      font-display: auto;
+    font-style: normal;
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2") format("woff2");
+} */
+
+.afsd {
+    color: #e3e3e3;
+    color: #21acaa;
+    /* цвет выбора страницы Home */
+    color: #30383c;
+    /* цвет другие страницы */
+    color: #1ab5b3;
+    /* Cool app design */
+    /* Contact */
+    color: #242b2e;
+    /* цвет фона боковой панели */
+}
+a {
+    text-decoration: none;
+}
+*{
+    color: black;
+}
+body {
+    min-height: 100vh;
+    background-color: #e3e3e3;
+    /* background: url(img/bg-img.jpg) no-repeat center center fixed;
+    background-size: 100%; */
+}
+
+.lSec_logo {
+    font-family: "Soho Gothic Pro"; 
+    font-size: 47.63px;
+    padding-bottom: 33px;
+    padding-top: 6px;
+}
+.main {
+    display: flex;
+    justify-content: flex-end;
+
+    background-color: #242b2e;
+}
+
+.lSec {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    height: 75vh;
+    width: 14.7vw;
+    /* ИЗМЕНИТЬ РАЗМЕР ЛЕВОЙ ПАНЕЛИ */
+
+    
+}
+
+.lSec>* {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.lSec_logo {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 125px;
+    background-color: white;
+}
+.lSec_media {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+}
+.lSec_Menu>a  {
+    text-transform: uppercase;
+    text-decoration: none;
+
+    padding-top: 23px;
+    padding-bottom: 23px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    background: linear-gradient(90deg, #333b3f, #2e363a);
+    height: 100%;
+    width: 100%;
+    text-align: end;
+    margin-right: 0px;
+    padding-right: 25px;
+    border-bottom: #202426 1px solid;
+}
+#lSec_Menu_selected {
+    background: #20abaa;
+    /* font-size: 100px; */
+}
+.lSec_filter{
+    display: inline;
+    text-align: end;
+
+    margin-right: 25px;
+
+    font-size: 19px;
+    font-weight: 200;
+    font-family: 'FontAwesome';
+    color: #1ab5b3;
+    margin-top: 24px;
+}
+.lSec_filter>span{
+    font-family: 'Roboto';
+    margin-right: 12px;
+    color: #1ab5b3;
+    font-size: 19px;
+    font-weight: 200;
+}
+.lSec_miniMenu {
+    margin-right: 25px;
+    margin-top: 10px;
+    font-family: 'Roboto';
+    font-size: 13px;
+    font-weight: 300;
+}
+.lSec_miniMenu>a {
+    margin-bottom: 5px;
+    color: #6b7072;
+}
+.lSec_miniMenu>a:first-child {
+    color: white;
+}
+.lSec_media {
+    margin-right: 25px;
+
+    margin-top: 51px;
+}
+.lSec_media>a {
+    margin-left: 10px;
+}
+.lSec_aut_rights{
+    margin-right: 25px;
+    margin-top: 26px;
+    font-size: 12px;
+    font-weight: 200;
+    color: #6b7072;
+}
+
+/* портфолио */
+
+
+
+.portfolio  {
+    display: flex;
+    flex-direction: column;
+}
+.portfolio>div {
+    display: flex;
+}
+.portfolio img {
+    width: 405px;
+    height: 311px;
+}
+/* .portfolio>div:nth-child(2)>img:nth-child(2) {
+    background-image: none;
+    background: #2db8b7;
+} */
+/* #portfolio_bg {
+    background-image: none !important;
+    background-color: #2db8b7; */
+    /* visibility: hidden;
+} */
+/* #portfolio_bg:hover {
+    background-color: #2db8b7;
+    background-image: url(img/Layer\ 114.svg.png) !important;
+    width: 405px;
+    height: 311px;
+    z-index: 10;
+} */
+
+
+
+/* контакты */
+
+
+
+.qickContactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    left: 84.4vw;
+    font-family: 'FontAwesome';
+}
+.qickContactInfo_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 90px;
+    height: 90px;
+    background-color: #28b4b2;
+    
+    
+}
+.qickContactInfo_btn>div {
+    font-size: 28px;
+    color: white;
+    width: 65px;
+    height: 65px;
+    border: white 1px solid;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 10px;
+
+}
+.qickContactInfo_info {
+    background-color: #333333;
+    opacity: 70%;
+    color: white;
+    padding-left: 20px;
+    padding-top: 23px;
+    height: 130px;
+    width: 283px;
+
+    font-size: 16px;
+    font-weight: 200;
+    font-family: 'Roboto';
+    
+}
+.qickContactInfo_info>span {
+    color: white;
+    margin-right: 15px;
+    font-family: 'FontAwesome';
+}
