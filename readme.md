@@ -24,7 +24,7 @@ Status:only desctop, 100%<br>
 
 <hr>
 
-[Project #]Nikolya-Y.github.io/KappeHome/index.html) KappeHome<br>
+[Project #](Nikolya-Y.github.io/KappeHome/index.html) KappeHome<br>
 Status:only desctop, 1920x1080, 100%<br>
 Верста из PSD как лаба студента
 
