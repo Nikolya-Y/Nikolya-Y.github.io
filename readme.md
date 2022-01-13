@@ -18,24 +18,24 @@ Link to origin site: PSD file in project directory
 
 <hr>
 
-[Project #](google)
-Status:only desctop, 100%
+[Project #](google)<br>
+Status:only desctop, 100%<br>
 Максимально простая страницу как лаба студента
 
 <hr>
 
-[Project #](KappeHome)
-Status:only desctop, 1920x1080, 100%
+[Project #](KappeHome)<br>
+Status:only desctop, 1920x1080, 100%<br>
 Верста из PSD как лаба студента
 
 <hr>
 
-[Project #](NeworMedia)
-Status:only desctop, 1920x1080, 100%
+[Project #](NeworMedia)<br>
+Status:only desctop, 1920x1080, 100%<br>
 Верстка из Behanсe по картинке как лаба студента
 
 <hr>
 
-[Project #](NeworMedia(v2))
-Status:only desctop, 1920x1080, 100%
+[Project #](NeworMedia(v2))<br>
+Status:only desctop, 1920x1080, 100%<br>
 Верстка из Behanсe по картинке как лаба студента но с правками (по желанию "заказчика" переделал)
