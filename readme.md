@@ -18,24 +18,30 @@ Link to origin site: PSD file in project directory
 
 <hr>
 
-[Project #4](Nikolya-Y.github.io/google/index.html) google<br>
+[Project #4](https://nikolya-y.github.io/Trekking/index.html) treking <br>
+Status: only desctop, 100% to end <br>
+Тоже как и все остальные делал как лабу студентам, часть писал не сам
+
+<hr>
+
+[Project #5](https://nikolya-y.github.io/google/index.html) google<br>
 Status:only desctop, 100%<br>
 Максимально простая страницу как лаба студента
 
 <hr>
 
-[Project #5](Nikolya-Y.github.io/KappeHome/index.html) KappeHome<br>
+[Project #6](https://nikolya-y.github.io/KappeHome/index.html) KappeHome<br>
 Status:only desctop, 1920x1080, 100%<br>
 Верста из PSD как лаба студента
 
 <hr>
 
-[Project #6](Nikolya-Y.github.io/NeworMedia/index.html) NeworMedia<br>
+[Project #7](https://nikolya-y.github.io/NeworMedia/index.html) NeworMedia<br>
 Status:only desctop, 1920x1080, 100%<br>
 Верстка из Behanсe по картинке как лаба студента
 
 <hr>
 
-[Project #7](Nikolya-Y.github.io/NeworMedia(v2)/index.html) NeworMedia(v2)<br>
+[Project #8](https://nikolya-y.github.io/NeworMedia(v2)/index.html) NeworMedia(v2)<br>
 Status:only desctop, 1920x1080, 100%<br>
 Верстка из Behanсe по картинке как лаба студента но с правками (по желанию "заказчика" переделал)
