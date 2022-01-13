@@ -18,3 +18,22 @@ Link to origin site: PSD file in project directory
 
 <hr>
 
+[Project #](google)
+Status:only desctop, 100%
+Максимально простая страницу как лаба студента
+
+<hr>
+
+[Project #](KappeHome)
+Status:only desctop, 100%
+Верста из PSD как лаба студента
+
+<hr>
+
+[Project #](NeworMedia)
+Status:only desctop, 100%
+Верстка из Behanсe по картинке как лаба студента
+
+[Project #](NeworMedia(v2))
+Status:only desctop, 100%
+Верстка из Behanсe по картинке как лаба студента но с правками (по желанию "заказчика" переделал)
