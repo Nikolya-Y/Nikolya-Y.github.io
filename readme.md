@@ -24,18 +24,18 @@ Status:only desctop, 100%<br>
 
 <hr>
 
-[Project #](KappeHome)<br>
+[Project #]Nikolya-Y.github.io/KappeHome/index.html) KappeHome<br>
 Status:only desctop, 1920x1080, 100%<br>
 Верста из PSD как лаба студента
 
 <hr>
 
-[Project #](NeworMedia)<br>
+[Project #](Nikolya-Y.github.io/NeworMedia/index.html) NeworMedia<br>
 Status:only desctop, 1920x1080, 100%<br>
 Верстка из Behanсe по картинке как лаба студента
 
 <hr>
 
-[Project #](NeworMedia(v2))<br>
+[Project #](Nikolya-Y.github.io/NeworMedia(v2)/index.html) NeworMedia(v2)<br>
 Status:only desctop, 1920x1080, 100%<br>
 Верстка из Behanсe по картинке как лаба студента но с правками (по желанию "заказчика" переделал)
